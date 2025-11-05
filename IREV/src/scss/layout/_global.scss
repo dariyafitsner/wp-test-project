@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --parallax-offset: 0px;
+}
+
+
+body{
+  background: getColor("background-black", 100);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity ease 0.3s;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+ul, ol{
+  list-style: none;
+}
+
+button{
+  background: transparent;
+  border: none;
+  color: #F8FAFF;
+  outline: none;
+  cursor: pointer;
+  transition: opacity ease 0.3s;
+
+  &:hover{
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+h1 {
+  @include font-style($FoundersGrotesk-family, 88px, 85%, 700, 0.02em, uppercase);
+}
+
+h2 {
+  @include font-style($FoundersGrotesk-family, 50px, 0.85, 700, 0.02em, uppercase);
+}
+
+h3{
+  @include font-style($FoundersGrotesk-family, 32px, 1, 700, 0, uppercase);
+}
+
+.home_main{
+  margin-top: calc($header-height + 67px);
+  margin-bottom: 90px;
+
+  @media(max-width: $tablet-width){
+    margin-top: calc(57px + 30px);
+  }
+
+  @media(max-width: $mobile-width){
+    margin-top: 73px;
+  }
+}
+
+.section {
+  padding: 200px 0;
+}
+
+.checkbox {
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.wpcf7-not-valid-tip {
+      position: absolute;
+    font-size: 10px !important;
+    right: -40px;
+}
