@@ -20,7 +20,7 @@ services:
         timeout: 10s
         retries: 10
     volumes:
-      - ./docker/data/db/new:/docker-entrypoint-initdb.d
+      - ./docker/data/db:/docker-entrypoint-initdb.d
   
   # Database backup
   database-backup:
